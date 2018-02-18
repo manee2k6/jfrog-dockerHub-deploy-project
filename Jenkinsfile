@@ -46,8 +46,5 @@ node {
        def app = docker.build("manee2k6/docker-nodejs:app-${commit_id}", '.').push()
      }
    }
-    stage ('Deploy Preparation'){
-        sh 'oc login https://api.starter-us-east-1.openshift.com --token=7QtU41KDPF2QO-0Ezxz6YYkaGFmC1Lay5oav24GsMjw'
-        sh 'oc new-project rockstar'
-    }
+    
 }
